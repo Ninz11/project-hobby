@@ -199,7 +199,8 @@
             let clientInterest = prompt("Have you been hiking before?");
             let country = prompt("What country are you from?");
             let contactInformation = prompt("What is your email address?");
-
+            country = country.trim();
+            country = country.toLowerCase();
             if (country === "london") {
                 alert(`Hello ${firstName}, we'll be in touch with our upcoming hiking events!`);
             } else {
