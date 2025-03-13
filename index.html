@@ -7,7 +7,7 @@
     <title>Hiking-My Hobby</title>
     <style>
         body {
-            background: rgb(149, 204, 204);
+            background: linear-gradient(113.3deg, rgb(134, 209, 228) -1.8%, rgb(60, 80, 115) 86.4%);
         }
 
         h1,
@@ -82,7 +82,7 @@
             display: block;
             padding: 8px 13px;
             margin: 20px auto;
-            font-size: 16px;
+            font-size: 15px;
             background: black;
             color: white;
             border-radius: 5px;
@@ -178,7 +178,7 @@
             <br />
             <a href="https://en.wikipedia.org/wiki/Hiking" target="_blank" class="read-more">☞ Read on Wikipedia</a>
         </p>
-        <button>Your Local Hike</button>
+        <button id="hike-button">Your Local Hike</button>
     </div>
     <footer>Coded by <a href="https://www.shecodes.io/graduates/89162-nigesty-hagos" target="_blank">Nigesty
             Hagos</a> with HTML,
@@ -194,8 +194,30 @@
             }
         }
 
+        function contactToHike() {
+            let firstName = prompt("What is your name?");
+            let clientInterest = prompt("Have you been hiking before?");
+            let country = prompt("What country are you from?");
+            let contactInformation = prompt("What is your email address?");
+
+            if (country === "london") {
+                alert(`Hello ${firstName}, we'll be in touch with our upcoming hiking events!`);
+            } else {
+                alert(`Hello ${firstName}! I look forward to contacting you soon with more details`);
+            }
+
+        }
+
+
+
+
+
+
         let themeButton = document.querySelector(".theme-button");
         themeButton.addEventListener("click", changeTheme);
+
+        let hikeButton = document.querySelector("#hike-button");
+        hikeButton.addEventListener("click", contactToHike);
     </script>
 </body>
 
